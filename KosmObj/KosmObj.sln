@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KosmObj", "KosmObj.csproj", "{F48D9CD9-00CB-4377-887E-C47A68D736AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F48D9CD9-00CB-4377-887E-C47A68D736AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48D9CD9-00CB-4377-887E-C47A68D736AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F48D9CD9-00CB-4377-887E-C47A68D736AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F48D9CD9-00CB-4377-887E-C47A68D736AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D82555E-3144-4D37-9507-14B135F6B240}
+	EndGlobalSection
+EndGlobal
