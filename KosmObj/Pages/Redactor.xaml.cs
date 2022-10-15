@@ -16,23 +16,18 @@ using System.Windows.Shapes;
 namespace KosmObj.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainMenu.xaml
+    /// Логика взаимодействия для Redactor.xaml
     /// </summary>
-    public partial class MainMenu : Page
+    public partial class Redactor : Page
     {
-        public MainMenu()
+        public Redactor()
         {
             InitializeComponent();
         }
 
-        private void andromeda_Click(object sender, RoutedEventArgs e)
+        private void LOADPIC_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new DataGridObjectKosmos());
-        }
 
-        private void mlechPath_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new DataGridObjectKosmos());
         }
     }
 }

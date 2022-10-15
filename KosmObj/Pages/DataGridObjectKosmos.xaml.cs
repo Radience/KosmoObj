@@ -24,5 +24,25 @@ namespace KosmObj.Pages
         {
             InitializeComponent();
         }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MainMenu());
+        }
+
+        private void edit_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Redactor());
+        }
+
+        private void delete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void create_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Redactor());
+        }
     }
 }
