@@ -5,10 +5,92 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:KosmObj.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="800"
       Title="DataGridObjectKosmos">
 
+    <Page.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="#FF322B7C" Offset="0.592"/>
+        </LinearGradientBrush>
+    </Page.Background>
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <ComboBox x:Name="Galaxy" Width="130" Height="30">
+                <ComboBoxItem>
+                    <TextBlock Text="Все"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Млечный Путь"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Андромеда"/>
+                </ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="Object" Margin="10,0" Width="130" Height="30">
+                <ComboBoxItem>
+                    <TextBlock Text="Все"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Спутники"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Планеты"/>
+                </ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="Kategory_object" Width="130" Height="30" SelectionChanged="Kategory_object_SelectionChanged">
+                <ComboBoxItem>
+                    <TextBlock Text="Все"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Газовые"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Карликовые"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Ледяные"/>
+                </ComboBoxItem>
+            </ComboBox>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="ПОИСК" Margin="5,0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="White"/>
+                <TextBox x:Name="search" Width="200" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="search_TextChanged"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="create" Content="СОЗДАТЬ" Width="130" Height="30" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Click="create_Click"/>
+            <Button x:Name="edit" Margin="30,0" Content="ИЗМЕНИТЬ" Width="130" Height="30" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Click="edit_Click"/>
+            <Button x:Name="delete" Content="УДАЛИТЬ" Width="130" Height="30" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Click="delete_Click"/>
+            <Button x:Name="back" Margin="30,0" Content="НАЗАД" Width="130" Height="30" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" Click="back_Click"/>
+        </StackPanel>
+
+        <ListBox Width="800" Height="450" x:Name="lstbox" HorizontalAlignment="Center" VerticalAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Grid.Row="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Image Width="200" Height="200" Source="{Binding photo_planet}"/>
+                        <StackPanel Margin="5" >
+                            <TextBlock Margin="2" FontSize="20" Text="" TextWrapping="Wrap" Width="Auto" HorizontalAlignment="Left"/>
+                            <StackPanel Orientation="Horizontal" Margin="5">
+                                <TextBlock Text="Название:" FontSize="14"/>
+                                <TextBlock FontSize="14" Text="{Binding name_planet}" Margin="5,0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Категория:" FontSize="14"/>
+                                <TextBlock FontSize="14" Text="{Binding name_kategory}" Margin="5,0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Page>

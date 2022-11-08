@@ -17,3 +17,5 @@ C:\Users\Radiance\source\repos\KosmObj\obj\Debug\KosmObj.csproj.GenerateResource
 C:\Users\Radiance\source\repos\KosmObj\obj\Debug\KosmObj.csproj.CoreCompileInputs.cache
 C:\Users\Radiance\source\repos\KosmObj\obj\Debug\KosmObj.exe
 C:\Users\Radiance\source\repos\KosmObj\obj\Debug\KosmObj.pdb
+C:\Users\Radiance\source\repos\KosmObj\obj\Debug\Pages\Redactor.g.cs
+C:\Users\Radiance\source\repos\KosmObj\obj\Debug\Pages\Redactor.baml

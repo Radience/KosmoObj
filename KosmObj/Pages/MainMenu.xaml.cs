@@ -24,5 +24,15 @@ namespace KosmObj.Pages
         {
             InitializeComponent();
         }
+
+        private void andromeda_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new DataGridObjectKosmos());
+        }
+
+        private void mlechPath_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new DataGridObjectKosmos());
+        }
     }
 }
